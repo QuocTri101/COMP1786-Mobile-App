@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="#F0F0F0"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvItemProjectName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/ivFavoriteStar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/btn_star_big_off" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvItemProjectId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#555555"/>
+    <TextView
+        android:id="@+id/tvItemProjectStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#E65100"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tvItemProjectBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#007F00"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvItemProjectLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#1976D2"
+        android:layout_marginTop="4dp"
+        android:textStyle="italic"/>
+
+
+</LinearLayout>

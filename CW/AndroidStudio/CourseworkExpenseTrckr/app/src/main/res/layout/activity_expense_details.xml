@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="?attr/homeAsUpIndicator"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expense Details"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <EditText android:id="@+id/etDetExpenseId" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Expense ID" android:enabled="false" android:textColor="#888888"/>
+
+        <EditText android:id="@+id/etDetExpenseDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date of Expense *" android:focusable="false" android:clickable="true" android:inputType="none"/>
+        <EditText android:id="@+id/etDetExpenseAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Amount *" android:inputType="numberDecimal"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Currency *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerDetExpenseCurrency" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/currency_array"/>
+        <EditText android:id="@+id/etDetExpenseClaimant" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Claimant Name *" android:inputType="text"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Type of Expense *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerDetExpenseType" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/expense_type_array"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment Method *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerDetPaymentMethod" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/payment_method_array"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment Status *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerDetPaymentStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/payment_status_array"/>
+
+        <EditText android:id="@+id/etDetExpenseDesc" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Description (Optional)" android:inputType="textMultiLine"/>
+        <EditText android:id="@+id/etDetExpenseLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Location (Optional)" android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnUpdateExpense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Update"
+                android:backgroundTint="#4CAF50"/> <Button
+            android:id="@+id/btnDeleteExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Delete"
+            android:backgroundTint="#F44336"/> </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

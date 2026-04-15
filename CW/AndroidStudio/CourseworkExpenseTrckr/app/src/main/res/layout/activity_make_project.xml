@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="?attr/homeAsUpIndicator"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Project"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etProjectId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Project ID/Code *"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etProjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Project Name *"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Project Description *"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/etStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start Date *"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/etEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End Date *"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/etManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Project Manager/Owner *"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Budget *"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/etSpecialReq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Special Requirements (Optional)"
+            android:inputType="textMultiLine"/>
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/project_status_array"/>
+        <Button
+            android:id="@+id/btnSaveProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Project"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

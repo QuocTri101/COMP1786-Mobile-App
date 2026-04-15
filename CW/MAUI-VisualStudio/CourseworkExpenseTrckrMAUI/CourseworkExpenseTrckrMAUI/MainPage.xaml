@@ -1,0 +1,48 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CourseworkExpenseTrckrMAUI"
+             x:Class="CourseworkExpenseTrckrMAUI.MainPage"
+             Title="Expense Tracker User App">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:FavIcon x:Key="FavIconConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *" Padding="16">
+
+        <SearchBar x:Name="searchBar" 
+                   Grid.Row="0" 
+                   Placeholder="Search by Name or Date..."
+                   TextChanged="OnSearchTextChanged"/>
+
+        <CollectionView x:Name="projectCollectionView" 
+                        Grid.Row="1" 
+                        Margin="0,16,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,12" Padding="16" BackgroundColor="#F0F0F0" CornerRadius="8" HasShadow="True">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProjectTapped" />
+                        </Frame.GestureRecognizers>
+
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, Auto">
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="18" TextColor="Black"/>
+
+                            <ImageButton Grid.Row="0" Grid.Column="1" 
+                                         Source="{Binding Favorite, Converter={StaticResource FavIconConverter}}" 
+                                         WidthRequest="32" HeightRequest="32"
+                                         Clicked="OnFavoriteClicked"
+                                         CommandParameter="{Binding .}"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding StartDate, StringFormat='Start: {0}'}" FontSize="14" TextColor="#555555"/>
+                            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Status, StringFormat='Status: {0}'}" FontSize="14" TextColor="#1976D2" FontAttributes="Bold"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

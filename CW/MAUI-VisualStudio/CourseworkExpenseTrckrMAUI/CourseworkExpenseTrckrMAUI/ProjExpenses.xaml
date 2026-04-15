@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CourseworkExpenseTrckrMAUI.ProjExpenses"
+             Title="ProjExpenses">
+    <Grid RowDefinitions="Auto, *" Padding="16">
+
+        <Button Grid.Row="0" 
+                Text="+ Add New Expense" 
+                BackgroundColor="#4CAF50" 
+                TextColor="White" 
+                FontAttributes="Bold"
+                Margin="0,0,0,16"
+                Clicked="OnAddNewExpenseClicked"/>
+
+        <CollectionView x:Name="expensesCollectionView" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,12" Padding="16" BackgroundColor="#F9F9F9" CornerRadius="8" HasShadow="True">
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, Auto">
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Amount, StringFormat='{0:F2}'}" FontAttributes="Bold" FontSize="18" TextColor="#D32F2F"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Currency}" FontAttributes="Bold" FontSize="18" TextColor="#D32F2F"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Claimant, StringFormat='Claimant: {0}'}" FontSize="14" TextColor="Black" Margin="0,4,0,0"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Date, StringFormat='Date: {0}'}" FontSize="12" TextColor="#757575"/>
+
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding PaymentStatus}" FontSize="12" FontAttributes="Italic" TextColor="#1976D2"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

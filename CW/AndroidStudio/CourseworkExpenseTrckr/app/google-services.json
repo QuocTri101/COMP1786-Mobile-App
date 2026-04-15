@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1025384971441",
+    "firebase_url": "https://so-awesome-project-1e71b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "so-awesome-project-1e71b",
+    "storage_bucket": "so-awesome-project-1e71b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025384971441:android:a40a1136c1f8644cad7690",
+        "android_client_info": {
+          "package_name": "com.example.courseworkexpensetrckr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_jlvqyVLaGAxO04EPe4EQtxOJHSCGbY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

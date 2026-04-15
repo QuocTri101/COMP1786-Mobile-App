@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="?attr/homeAsUpIndicator"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Expense"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText android:id="@+id/etExpenseId" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Expense ID *" android:inputType="text"/>
+
+        <EditText android:id="@+id/etExpenseDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date of Expense *" android:focusable="false" android:clickable="true" android:inputType="none"/>
+
+        <EditText android:id="@+id/etExpenseAmount" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Amount *" android:inputType="numberDecimal"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Currency *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerExpenseCurrency" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/currency_array"/>
+        <EditText android:id="@+id/etExpenseClaimant" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Claimant Name *" android:inputType="text"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Type of Expense *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerExpenseType" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/expense_type_array"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment Method *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerPaymentMethod" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/payment_method_array"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Payment Status *" android:layout_marginTop="8dp"/>
+        <Spinner android:id="@+id/spinnerPaymentStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/payment_status_array"/>
+
+        <EditText android:id="@+id/etExpenseDesc" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Description (Optional)" android:inputType="textMultiLine"/>
+        <EditText android:id="@+id/etExpenseLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Location (Optional)" android:inputType="text"/>
+
+        <Button android:id="@+id/btnSaveExpense" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Expense" android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

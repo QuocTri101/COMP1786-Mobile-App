@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">CourseworkExpenseTrckr</string>
+    <string name="firebase_db_url">https://so-awesome-project-1e71b-default-rtdb.asia-southeast1.firebasedatabase.app/</string>
+    <string-array name="fav_keywords">
+        <item>fav</item>
+        <item>favorite</item>
+        <item>favourite</item>
+        <item>star</item>
+        <item>starred</item>
+    </string-array>
+    <string-array name="project_status_array">
+        <item>Active</item>
+        <item>Completed</item>
+        <item>On Hold</item>
+    </string-array>
+    <string-array name="expense_type_array">
+        <item>Travel</item>
+        <item>Equipment</item>
+        <item>Materials</item>
+        <item>Services</item>
+        <item>Software/Licenses</item>
+        <item>Labour costs</item>
+        <item>Utilities</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="payment_method_array">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Bank Transfer</item>
+        <item>Cheque</item>
+    </string-array>
+    <string-array name="payment_status_array">
+        <item>Paid</item>
+        <item>Pending</item>
+        <item>Reimbursed</item>
+    </string-array>
+    <string-array name="currency_array">
+        <item>USD</item>
+        <item>VND</item>
+        <item>EUR</item>
+        <item>GBP</item>
+    </string-array>
+</resources>
