@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Logbook_Excersise3</string>
+    <string-array name="expense_categories">
+        <item>Select a Category...</item>
+        <item>Food</item>
+        <item>Transportation</item>
+        <item>Utilities</item>
+        <item>Entertainment</item>
+        <item>Other</item>
+    </string-array>
+</resources>
