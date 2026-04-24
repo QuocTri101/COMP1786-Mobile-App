@@ -66,7 +66,11 @@ public class ViewProjectsActivity extends AppCompatActivity {
                     Project project = dataSnapshot.getValue(Project.class);
                     projectList.add(project);
                 }
-                prjAdapter.notifyDataSetChanged();
+                if (searchView != null) {
+                    filterList(searchView.getQuery().toString());
+                } else {
+                    prjAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
